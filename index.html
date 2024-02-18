@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Managment</title>
+    <link rel="icon" href="image/icon.ico" />
+    <!-- Main style -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Cabin:wght@600&family=Cairo:wght@300;400;700&family=Geologica:wght@300&family=Inter:wght@400;600&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Nunito:wght@200;300;400;500;600;700&family=Open+Sans:wght@400;700&family=Oswald:wght@200;300;400;500;600;700&family=Playpen+Sans:wght@600&family=Poppins:wght@200;400;500;600;700;800;900&family=Prompt&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@500&family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="confirmationDelete">
+      <div class="text">
+        <div class="icon">
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+        <h3>Deleting Product</h3>
+        <p>Are you sure you want to delete the product <span></span>?</p>
+      </div>
+      <div class="action">
+        <button id="yes">Yes, delete the product</button>
+        <button id="no">No, keep the product</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="head">
+        <h2>Product Managment</h2>
+      </div>
+      <form class="inputs">
+        <div class="inputTitle" style="width: 100%; position: relative">
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter the title"
+            required
+          />
+        </div>
+        <div class="price" style="position: relative">
+          <input
+            type="number"
+            name="price"
+            id="price"
+            placeholder="Enter the price"
+            required
+            onkeyup="getTotal()"
+          />
+          <input
+            type="number"
+            name="taxes"
+            id="taxes"
+            placeholder="Enter taxes price"
+            onkeyup="getTotal()"
+          />
+          <input
+            type="number"
+            name="ads"
+            id="ads"
+            placeholder="Enter ads price"
+            onkeyup="getTotal()"
+          />
+          <input
+            type="number"
+            name="discount"
+            id="discount"
+            placeholder="Enter discount price"
+            onkeyup="getTotal()"
+          />
+          <small id="total"></small>
+        </div>
+        <div class="count_category">
+          <input
+            type="text"
+            name="count"
+            id="count"
+            placeholder="Enter the count"
+          />
+          <input
+            type="text"
+            name="category"
+            id="category"
+            placeholder="Enter the category"
+          />
+        </div>
+        <button id="submit">Create</button>
+      </form>
+      <div class="outputs">
+        <div class="searchBlock">
+          <input onkeyup="searchProduct(this.value)" type="text" id="search" placeholder="Search" />
+          <div class="btnSearch">
+            <button id="searchTitle" onclick="getSearchMood(this.id)">Search By Title</button>
+            <button id="searchCategory" onclick="getSearchMood(this.id)">Search By Category</button>
+          </div>
+        </div>
+        <div id="deleteAll"></div>
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>title</th>
+              <th>price</th>
+              <th>taxes</th>
+              <th>ads</th>
+              <th>discount</th>
+              <th>total</th>
+              <th>category</th>
+              <th>action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

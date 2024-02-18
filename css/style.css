@@ -1,0 +1,358 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: #222;
+}
+.container {
+  width: 70%;
+  margin: auto;
+}
+.head {
+  text-align: center;
+  padding: 20px 0;
+}
+.head h2 {
+  font-size: 25px;
+  color: #fff;
+}
+
+/* Framwork */
+input {
+  background-color: #f3f3f3;
+  padding: 10px 0;
+  padding-left: 20px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 3px;
+  box-shadow: 2px 2px 0 #aaaaaa;
+}
+input:focus {
+  background-color: #ededed;
+  box-shadow: 2px 2px 0 #6d6d6d;
+}
+button,
+.update_btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #00a887;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #00a887;
+  box-shadow: 0 0 8px #00a887;
+}
+.update_btn {
+  background-color: #357edd;
+  width: 100%;
+  text-align: center;
+}
+.update_btn:hover {
+  box-shadow: 0 0 8px #357edd;
+}
+.confirmationDelete,
+.confirmationDeleteAll {
+  background-color: white;
+  padding: 50px 30px;
+  width: 450px;
+  height: 250px;
+  border-radius: 3px;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.confirmationDelete {
+  display: none;
+}
+.confirmationDelete .icon,
+.confirmationDeleteAll .icon {
+  width: 50px;
+  height: 50px;
+  color: #ee4541;
+  background-color: #fef2f2;
+  font-size: 24px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 5px;
+}
+.confirmationDelete .text,
+.confirmationDeleteAll .text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.confirmationDelete .text p span,
+.confirmationDeleteAll .text p span {
+  font-weight: 600;
+}
+.confirmationDelete .action,
+.confirmationDeleteAll .action {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  font-size: 10px;
+}
+.confirmationDelete .action button,
+.confirmationDeleteAll .action button {
+  padding: 10px 15px;
+  font-size: 13px;
+  box-shadow: none;
+}
+.confirmationDelete .action #yes,
+.confirmationDeleteAll .action #yes {
+  background-color: #ee4444;
+}
+.confirmationDelete .action #no,
+.confirmationDeleteAll .action #no {
+  background-color: #e6e7eb;
+  color: black;
+}
+#deleteAll {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#deleteAll h3 {
+  color: black;
+}
+#deleteAll button {
+  background-color: #00b699;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+#labelTitle,
+#labelPrice {
+  color: #ff5549;
+  font-weight: 500;
+  position: absolute;
+  bottom: -23px;
+  left: 5px;
+  font-size: 13px;
+}
+#labelPrice {
+  bottom: -21px;
+}
+/* Framwork */
+
+/* Start Inputs */
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: white;
+  padding: 40px 40px 0;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+.inputs .price {
+  width: 100%;
+}
+.inputs .price input {
+  width: 21%;
+}
+.inputs .price #total {
+  background-color: #ff5549;
+  color: white;
+  padding: 10.5px 10px;
+  font-size: 15px;
+  border-radius: 4px;
+}
+.inputs .price #total::before {
+  content: "Total : ";
+}
+.inputs .count_category {
+  display: flex;
+  width: 100%;
+  gap: 40px;
+  justify-content: space-between;
+}
+.inputs #submit {
+  width: 100%;
+}
+/* End Inputs */
+
+/* Start Outputs */
+.outputs {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: #fff;
+  width: 100%;
+  border-radius: 0 0 4px 4px;
+  padding: 30px;
+}
+.outputs .searchBlock {
+  width: 100%;
+  text-align: center;
+}
+.outputs .searchBlock .btnSearch {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+.outputs .searchBlock .btnSearch button {
+  flex: 1;
+}
+
+/* Start Table */
+.content-table {
+  border-collapse: collapse;
+  margin: -20px 0 25px;
+  font-size: 15px;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+}
+.content-table thead tr {
+  background-color: #009879;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.content-table thead th:first-of-type {
+  border-radius: 5px 0 0 0;
+}
+.content-table thead th:last-of-type {
+  border-radius: 0 5px 0 0;
+}
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+  text-align: center;
+}
+.content-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 3px solid #009879;
+}
+.content-table tbody td button {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 50%;
+  margin: auto;
+}
+.content-table tbody td button#update {
+  background-color: #357edd;
+}
+.content-table tbody td button#delete {
+  background-color: #ff4136;
+}
+.content-table tbody td button#update:hover {
+  box-shadow: 0 0 4px #357edd;
+}
+.content-table tbody td button#delete:hover {
+  box-shadow: 0 0 4px #ff4136;
+}
+.content-table td#action {
+  display: flex;
+  gap: 15px;
+}
+/* End Table */
+/* End Outputs */
+
+/* Media */
+@media (max-width: 1430px) {
+  .container {
+    width: 80%;
+  }
+}
+@media (max-width: 1240px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 1100px) {
+  .container {
+    width: 95%;
+  }
+  .inputs .price {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inputs small {
+    display: inline-block;
+  }
+}
+@media (max-width: 800px) {
+  .inputs .price input {
+    min-width: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .content-table {
+    font-size: 12px;
+  }
+  .content-table th,
+  .content-table td {
+    padding: 3px 4px;
+  }
+  .content-table tbody td button {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .inputs .count_category {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .inputs .price input {
+    min-width: 100%;
+  }
+  .outputs .searchBlock .btnSearch {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .outputs .searchBlock .btnSearch button {
+    flex: 1;
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+  .content-table {
+    font-size: 10px;
+  }
+  .content-table th,
+  .content-table td {
+    padding: 2px 3px;
+  }
+  .content-table tbody td button {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+  }
+}
+/* Medai */
